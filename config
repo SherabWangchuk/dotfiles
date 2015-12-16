@@ -1,0 +1,80 @@
+Host lxplus*
+   Hostname lxplus.cern.ch 
+   User mdemmer
+   Protocol 2
+   GSSAPIAuthentication yes
+   GSSAPIDelegateCredentials yes
+   GSSAPITrustDns yes 
+   ForwardX11 yes
+   ForwardX11Trusted yes
+Host svn.cern.ch
+   User mdemmer
+   Protocol 2
+   ForwardX11 no
+   IdentityFile ~/.ssh/id_rsa
+Host isscvs.cern.ch
+   User mdemmer    
+   Protocol 2
+   ForwardX11 no
+   IdentityFile ~/.ssh/id_rsa
+Host e5-login
+   Hostname login.e5.physik.tu-dortmund.de
+   IdentityFile ~/.ssh/e5-login
+   User mdemmer
+   Protocol 2
+   ForwardX11 yes
+   ForwardX11Trusted yes
+   ForwardAgent yes
+Host klaus
+   Hostname klaus-wacker.e5.physik.tu-dortmund.de
+   IdentityFile ~/.ssh/klaus
+   User mdemmer
+   Protocol 2
+   ForwardX11 yes
+   ForwardX11Trusted yes
+   ForwardAgent yes
+   #ProxyCommand ssh e5-login nc %h %p
+Host phido3
+   Hostname hpc-gw3.phido.physik.tu-dortmund.de
+   IdentityFile ~/.ssh/id_rsa.phido
+   User mdemmer
+   ForwardX11 yes
+   ControlMaster auto
+   ControlPath ~/.ssh/master-%r@%h:%p
+Host phido4
+   Hostname hpc-gw4.phido.physik.tu-dortmund.de
+   IdentityFile ~/.ssh/id_rsa.phido
+   User mdemmer
+   ForwardX11 yes
+   ControlMaster auto
+   ControlPath ~/.ssh/master-%r@%h:%p
+Host phido-klaus
+   Hostname 10.141.1.200
+   #Hostname 129.217.160.22
+   IdentityFile ~/.ssh/id_rsa.phido
+   User mdemmer
+   ForwardX11 yes
+   ForwardX11Trusted yes
+   ForwardAgent yes
+   ProxyCommand ssh phido4 nc %h %p
+Host eve
+   Hostname eve.e5.physik.tu-dortmund.de
+   IdentityFile ~/.ssh/klaus
+   User mdemmer
+   Protocol 2
+   ForwardX11 yes
+   ForwardX11Trusted yes
+   ForwardAgent yes
+   #ProxyCommand ssh e5-login nc %h %p
+Host labpc
+   Hostname 129.217.160.70
+   User scifisimuser
+   ForwardX11 yes
+   ForwardX11Trusted yes
+   ForwardAgent yes
+Host scifisim-vm
+    Hostname 129.217.160.109
+    User scifisimuser
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes 

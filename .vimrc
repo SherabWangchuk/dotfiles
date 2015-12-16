@@ -1,0 +1,26 @@
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+  
+" Make backspace behave in a sane manner.
+set backspace=indent,eol,start
+   
+" Switch syntax highlighting on
+syntax on
+    
+" Enable file type detection and do language-dependent indenting.
+filetype plugin indent on
+
+" Enable line numbering
+set number
+
+" show auto complete menus.
+set wildmenu
+set wildmode=list:longest
+
+colorscheme desert
+
+" Setup indentation w/o hard tabs
+set expandtab
+set shiftwidth=2
+set softtabstop=2
