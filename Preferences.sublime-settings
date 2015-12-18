@@ -1,0 +1,16 @@
+{
+	"color_scheme": "Packages/Colorsublime - Themes/Github.tmTheme",
+	"dictionary": "Packages/User/Dictionaries/German_de_DE.dic",
+	"font_face": "Anonymous Pro",
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"spell_check": false,
+	"tab_size": 2
+}
